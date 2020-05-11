@@ -264,3 +264,72 @@ null || "user" => user
  > Another important property of these two operators is that the part to their right is evaluated only when necessary. In the case of true || X, no matter what X is—even if it’s a piece of program that does something terrible—the result will be true, and X is never evaluated.The same goes for false && X, which is false and will ignore X. This is called **short-circuit evaluation**
 
  
+ ---
+
+ ## Chapter 2  - Program Structure
+
+ > Def: *Expression* - A fragment of code that produces a value
+
+ > A program is a list of statements, simplest kind of statement is an expression with a semicolon after it. 
+
+ > Def: *Side effects* - Changing something else, like the statements that come after it
+
+ ### Bindings
+
+ ``` javascript
+ let caught = 5 * 5;
+
+ let ten = 10; 
+ console.log(ten * ten);
+  // -> 100
+
+// = op to change existing bindings
+
+let mood  = "light";
+console.log(mood);
+// -> light
+
+mood = "dark";
+console.log(mood);
+// -> dark
+
+Another Example
+let luigisDebt = 140;
+luigisDebt = luigisDebt - 35;
+console.log(luigisDebt);
+// -> 105
+
+Eg: Empty Binding gives Undefined
+
+A single let statement may define multiple bindings. 
+let one = 1, two  = 2;
+console.log(one + two );
+// -> 3
+
+The words var and const can also be used to create bindings, in a similar way to let 
+
+e.g.
+var name = "Ayda";
+const greeting = 'Hello';
+console.log(greeting + name)
+// -> Hello Ayda
+
+ ```
+
+ ### Explaining Var and Let and const
+
+ Var (short for "variable") is the way bindings were declared in pre-2015 JS. 
+ Const stands for constant. It defines a constant binding, which points at the same value for as long as it lives. This is useful for bindings that give a name to a value so that you can easily refer to it later. 
+Let is a bit confusing as its similar to var but let is generally better practice 
+
+
+### Binding Rules
+- cannnot start with numbers
+- can indclude $ and _ but nothing else
+- special keywords cannot be used like let. 
+
+
+### Console.log
+lets you see a log of values from the program
+
+
