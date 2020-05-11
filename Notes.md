@@ -332,4 +332,83 @@ Let is a bit confusing as its similar to var but let is generally better practic
 ### Console.log
 lets you see a log of values from the program
 
+### Conditionals
 
+``` javascript
+let theNumber = Number(prompt("Pick a number"));
+if (!Number.isNaN(theNUmber)){
+  console.log("your number is the square root of " + theNUmber * theNumber);
+} else {
+  console.log("Hey. Why didn't you give me a number?");
+}
+
+Chaining multiple if and else statements together
+
+if (num < 10) {
+  console.log("Small");
+} else if (num < 100) {
+  console.log("Medium");
+} else {
+  console.log("Large");
+}
+
+While and do loops
+
+let number = 0;
+while (number <= 12) {
+  console.log(number);
+  number = number + 2;
+}
+
+
+Using a break statement
+
+for( let current = 20; current <= 20 ;current = current + 1){
+  if (current % 7 == 0) {
+    console.log(current);
+    break;
+  }
+}
+
+
+Different ways to update bindings
+
+counter = counter + 1;
+counter+= 1;
+result *= 2;
+nunmber +=2;
+conter++;
+couner--;
+
+```
+
+### Switch
+
+switch is intended to replace the code below
+``` javascript
+if (x == "value1") action1();
+else if (x == "value2") action2();
+else if (x == "value3") action3();
+else defaultAction();
+
+
+like so
+
+switch (prompt("what is the weather like?)){
+  case "rainy":
+    console.log("Remember to bring an umbrella.");
+    break;
+  case "sunny":
+    console.log("Dress Lightly.");
+   // no break here cause we can share code between cases
+  case "cloudy":
+    console.log("Go outside.");
+    break;
+  default: 
+    console.log("Unknown weather type!");
+    break;
+}
+
+
+
+```
