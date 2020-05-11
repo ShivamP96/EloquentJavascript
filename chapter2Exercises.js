@@ -34,11 +34,17 @@ for(let i = 1; i < 100; i++){
 // ChessBoard
 // write a program that creates a string that represents an 8x8 grid using newline characters to separate lines. At each position of the grid there is either a space or a # chracter
 
-let bindingSize = 8;
-for(let i = 0; i < bindingSize; i++){
-
-  for (let j = 0; j < bindingSize; j++){
-    
-
+let size = 8;
+board = '';
+for(let i = 0; i < size; i++){
+  for (let j = 0; j < size; j++){
+    if ((i+j) % 2 == 0 ){
+      board += " ";
+    } else {
+      board += "#";
+    }
   }
+  board +="\n";
 }
+
+console.log(board)
