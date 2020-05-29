@@ -656,4 +656,19 @@ console.log(wrap(2));
 This situation is a good demonstration of the fact that local bindings are created anew for every call, and different calls can’t trample on one another’s local bindings
 
 This feature—being able to reference a specific instance of a local binding in an enclosing scope—is called closure.
+A function that references bindings from local scopes around it is called a closure
+
+With a slight change, we can turn the previous example into a way to create functions that multiply by an arbitrary amount.
+
+```
+function multiplier(factor) {
+  return number => number * factor;
+}
+let twice = multiplier(2)
+console.log(twice(5));
+// -> 10
+```
+In the example, multiplier is called and creates an environment in which its factor parameter is bound to 2. The function value it returns, which is stored in twice, remembers this environment. So when that is called, it multiplies its argument by 2.
+
+### Recursion
 
